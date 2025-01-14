@@ -1,0 +1,5 @@
+name: Protect The King
+api-version: 1.8
+author: Lenoob
+main: fr.lenoob.ptk.Main
+version: 1.0.0
