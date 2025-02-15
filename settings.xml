@@ -1,0 +1,7 @@
+<servers>
+    <server>
+        <id>ftp-server</id>
+        <username>plugin</username>
+        <password>plugin</password>
+    </server>
+</servers>
