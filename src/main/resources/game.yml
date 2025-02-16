@@ -1,0 +1,29 @@
+teams :
+  yellow:
+    enabled: false
+    prefix : "&e Jaune &f"
+  blue:
+    enabled: false
+    prefix: "&1 Bleu &f"
+  purple:
+    enabled: false
+    prefix: "&5 Violet &f"
+game:
+  prefix: "&b&lPTK &8&l>> &f"
+  crown:
+    one:
+      enabled: true
+      day: 2
+    two:
+      enabled: true
+      day: 4
+    three:
+      enabled: true
+      day: 6
+  dim:
+    nether:
+      enabled: true
+      day: 5
+    end:
+      enabled: false
+      day: 0
