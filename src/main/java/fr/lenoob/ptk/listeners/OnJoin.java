@@ -15,17 +15,13 @@ public class OnJoin implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event){
-        ConfigManager cfg = new ConfigManager();
-        Registerer reg = new Registerer(cfg);
+        ConfigManager cfg = Main.getInstance().config;
         Player player = event.getPlayer();
-        Team jaune = Main.getInstance().sb.getTeam("yellow");
-        jaune.addEntry(player.getName());
-        Bukkit.broadcastMessage("Le joueur "+player.getName()+" à été ajouté a la team "+jaune.getName());
-        Bukkit.broadcastMessage("Il se nomme desormais "+player.getDisplayName());
-        System.out.println(Main.getInstance().sb.getTeams());
-        System.out.println(Main.getInstance().sb.getTeam("yellow").getEntries());
-        System.out.println(Main.getInstance().sb.getTeam("yellow").getPrefix());
-        Bukkit.broadcastMessage(Main.getInstance().sb.getTeam("yellow").getPrefix());
+        player.setScoreboard(Main.getInstance().sb);
+        event.setJoinMessage("");
+        int j = Bukkit.getOnlinePlayers().size();
+        int m = Bukkit.getMaxPlayers();
+        Bukkit.broadcastMessage(cfg.getConfigFile().getString("game.prefix").replaceAll("&","§")+player.getDisplayName()+" §2à rejoins la partie §8[§2"+j+"§8/§2"+m+"§8]");
     }
 
 }

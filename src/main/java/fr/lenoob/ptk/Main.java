@@ -1,6 +1,7 @@
 package fr.lenoob.ptk;
 
 import fr.lenoob.ptk.listeners.OnJoin;
+import fr.lenoob.ptk.listeners.OnLeft;
 import fr.lenoob.ptk.utils.ConfigManager;
 import fr.lenoob.ptk.utils.Registerer;
 import org.bukkit.Bukkit;
@@ -12,7 +13,7 @@ public class Main extends JavaPlugin {
 
     PluginManager pm = Bukkit.getPluginManager();
     public static Main instance;
-    ConfigManager config = new ConfigManager();
+    public ConfigManager config = new ConfigManager();
     Registerer reg = new Registerer(config);
     public Scoreboard sb ;
 
@@ -33,6 +34,7 @@ public class Main extends JavaPlugin {
         config.generateConfig();
         reg.registerTeam();
         pm.registerEvents(new OnJoin(),this);
+        pm.registerEvents(new OnLeft(),this);
         super.onEnable();
     }
 
