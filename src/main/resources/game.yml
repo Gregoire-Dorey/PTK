@@ -1,14 +1,18 @@
 teams :
   yellow:
-    enabled: false
+    enabled: true
     prefix : "&e Jaune &f"
   blue:
-    enabled: false
+    enabled: true
     prefix: "&1 Bleu &f"
   purple:
-    enabled: false
+    enabled: true
     prefix: "&5 Violet &f"
 game:
+  tablist:
+    header: "&b&lPTK &8&l"
+    footer1: "&2Orga : &a Lenoob_"
+    footer2: "&6Hebergement : &eHogcraft"
   prefix: "&b&lPTK &8&l>> &f"
   crown:
     one:
