@@ -3,3 +3,21 @@ api-version: 1.8
 author: Lenoob
 main: fr.lenoob.ptk.Main
 version: 1.0.0
+commands:
+  start:
+    description: Commande de démarrage de la partie
+    permission: ptk.cmd.start.use
+    permission-message: Vous n'avez pas la permission d'éffectuer ceci
+  team:
+    description: Commande relative aux équipes
+    permission: ptk.cmd.team.use
+    aliases:
+      - teams
+      - equipe
+      - equipes
+    permission-message: Vous n'avez pas la permission d'éffectuer ceci
+  king:
+    description: Commande relative aux rois
+    aliases:
+      - kings
+      - roi

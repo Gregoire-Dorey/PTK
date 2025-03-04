@@ -36,6 +36,7 @@ public class Registerer {
             newTeam.setAllowFriendlyFire(true);
             System.out.println("La team "+newTeam.getName()+" a ete cree avec succes");
         }
+        Team noTeam = Main.getInstance().sb.registerNewTeam("No Team");
     }
 
     public ArrayList<String> getTeamList() {

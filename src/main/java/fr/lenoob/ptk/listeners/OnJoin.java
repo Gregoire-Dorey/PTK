@@ -1,6 +1,7 @@
 package fr.lenoob.ptk.listeners;
 
 import fr.lenoob.ptk.Main;
+import fr.lenoob.ptk.scoreboard.PRE_GAME;
 import fr.lenoob.ptk.utils.ConfigManager;
 import fr.lenoob.ptk.utils.GameState;
 import fr.lenoob.ptk.utils.Registerer;
@@ -20,9 +21,11 @@ public class OnJoin implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event){
+        Team noTeam = Main.getInstance().sb.getTeam("No Team");
         ConfigManager cfg = Main.getInstance().config;
         Player player = event.getPlayer();
         player.setScoreboard(Main.getInstance().sb);
+        noTeam.addEntry(player.getDisplayName());
         event.setJoinMessage("");
         int j = Bukkit.getOnlinePlayers().size();
         int m = Bukkit.getMaxPlayers();
@@ -37,6 +40,9 @@ public class OnJoin implements Listener {
             banner.setItemMeta(bannerM);
             player.getInventory().clear();
             player.getInventory().setItem(4,banner);
+        }
+        if(Main.getInstance().isCurrent(GameState.WAIT)){
+            new PRE_GAME(Main.getInstance().sm).game(player);
         }
     }
 
