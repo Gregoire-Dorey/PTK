@@ -2,12 +2,24 @@ teams :
   yellow:
     enabled: true
     prefix : "&e Jaune &f"
+    base:
+      x: 0.0
+      y: 0.0
+      z: 0.0
   blue:
     enabled: true
     prefix: "&1 Bleu &f"
+    base:
+      x: 0.0
+      y: 0.0
+      z: 0.0
   purple:
     enabled: true
     prefix: "&5 Violet &f"
+    base:
+      x: 0.0
+      y: 0.0
+      z: 0.0
 game:
   tablist:
     header: "&b&lPTK &8&l"
@@ -17,17 +29,17 @@ game:
   crown:
     one:
       enabled: true
-      day: 2
+      day: 3
     two:
       enabled: true
-      day: 4
+      day: 5
     three:
       enabled: true
-      day: 6
+      day: 7
   dim:
     nether:
       enabled: true
-      day: 5
+      day: 4
     end:
       enabled: false
       day: 0
