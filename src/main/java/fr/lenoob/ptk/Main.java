@@ -34,6 +34,7 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        System.out.println("Ceci est un test");
         current = GameState.WAIT;
         sb = Bukkit.getScoreboardManager().getNewScoreboard();
         config.generateConfig();
