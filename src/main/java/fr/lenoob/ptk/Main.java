@@ -46,6 +46,7 @@ public class Main extends JavaPlugin {
         pm.registerEvents(new BannerDrop(),this);
         pm.registerEvents(new CutClean(),this);
         pm.registerEvents(new CutCleanFood(),this);
+        pm.registerEvents(new OnWalk(),this);
         prefix = config.getConfigFile().getString("game.prefix");
 
         getCommand("start").setExecutor(new CommandStart());
